@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/App.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header></header>
+    <main
+      id="root"
+      class="container d-flex justify-content-center align-items-center"
+      style="flex-direction: column; height: 100%"
+    >
+      <!--get name section-->
+      <section id="get-name">
+        <label class="form-label m-2" for="username">Hello what is your name?</label>
+        <input class="form-control m-2" name="username" />
+        <button id="save" onclick="saveName()">Save Name</button>
+      </section>
+      <!--ask name section-->
+      <section></section>
+
+      <!--good bye section-->
+      <div id="good-bye-container">
+        <p class="fs-3">Uyaphapha...bhabhayi!!</p>
+      </div>
+
+      <!--questions section-->
+      <section id="choice-container">
+        <div>
+          <p class="fs-3">
+            Hello <span id="username">name</span>,would you like to fill out the
+            form?
+          </p>
+          <div id="choice-buttons">
+            <button class="btn btn-primary btn-lg" id="yes" onclick="onYes()">
+              Yes
+            </button>
+            <button class="btn btn-secondary btn-lg" id="no" onclick="onNo()">
+              No
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- form section-->
+      <section id="form">
+        <h1 class="text-center mb-5">Form js Workshop</h1>
+        <form name="myForm" class="w-75" action="" onsubmit="submitHandler(event)">
+          <label class="form-label m-2" for="number">Enter a Number:</label>
+          <input class="form-control m-2" name="number" />
+
+          <label class="form-label m-2" for="email">Enter Email:</label>
+          <input class="form-control m-2" name="email" />
+          <span
+            id="error-message"
+            class="m-2 p-3 text-center"
+            >Error...please make sure you provide a valid number and
+            email.!!</span
+          >
+          <input class="m-2 p-3" type="submit" value="Submit" />
+        </form>
+      </section>
+    </main>
+    <footer></footer>
+
+    <script type="module" src="/App.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
