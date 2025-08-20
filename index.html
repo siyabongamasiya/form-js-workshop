@@ -23,7 +23,7 @@
       <section id="get-name">
         <label class="form-label m-2" for="username">Hello what is your name?</label>
         <input class="form-control m-2" name="username" />
-        <button id="save" onclick="saveName()">Save Name</button>
+        <button id="save">Save Name</button>
       </section>
       <!--ask name section-->
       <section></section>
@@ -41,12 +41,8 @@
             form?
           </p>
           <div id="choice-buttons">
-            <button class="btn btn-primary btn-lg" id="yes" onclick="onYes()">
-              Yes
-            </button>
-            <button class="btn btn-secondary btn-lg" id="no" onclick="onNo()">
-              No
-            </button>
+            <button class="btn btn-primary btn-lg" id="yes">Yes</button>
+            <button class="btn btn-secondary btn-lg" id="no">No</button>
           </div>
         </div>
       </section>
@@ -54,7 +50,7 @@
       <!-- form section-->
       <section id="form">
         <h1 class="text-center mb-5">Form js Workshop</h1>
-        <form name="myForm" class="w-75" action="" onsubmit="submitHandler(event)">
+        <form name="myForm" class="w-75" action="">
           <label class="form-label m-2" for="number">Enter a Number:</label>
           <input class="form-control m-2" name="number" />
 

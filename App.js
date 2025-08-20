@@ -1,13 +1,5 @@
 import FormControl from "./FormControl.js";
 
-// // Set Item
-// localStorage.setItem("lastname", "Smith");
-// // Retrieve
-// document.querySelector('p').innerHTML = localStorage.getItem("lastname");
-
-// const num1 = new NumberWork(-1)
-// num1.displayNumber()
-// num1.posOrNeg()
 const errorMessageNumber = document.querySelector("#error-message");
 
 const getUsername = () => {
@@ -24,9 +16,10 @@ const getUsername = () => {
   }
 };
 
-getUsername()   
+getUsername();
 
-window.submitHandler = (event) => {
+// --- Event Handlers ---
+const submitHandler = (event) => {
   event.preventDefault();
   const inputvalue = document.querySelector("input[name='number']").value;
   const email = document.querySelector("input[name='email']");
@@ -39,7 +32,7 @@ window.submitHandler = (event) => {
   }
 };
 
-window.onYes = () => {
+const onYes = () => {
   const form = document.querySelector("#form");
   const choiceContainer = document.querySelector("#choice-container");
 
@@ -47,7 +40,7 @@ window.onYes = () => {
   form.style.display = "block";
 };
 
-window.onNo = () => {
+const onNo = () => {
   const goodByeContainer = document.querySelector("#good-bye-container");
   const choiceContainer = document.querySelector("#choice-container");
 
@@ -55,7 +48,7 @@ window.onNo = () => {
   choiceContainer.style.display = "none";
 };
 
-window.saveName = () => {
+const saveName = () => {
   const usernameField = document.querySelector("input[name='username']");
   const getNameSection = document.querySelector("#get-name");
   const choiceContainer = document.querySelector("#choice-container");
@@ -66,9 +59,8 @@ window.saveName = () => {
   choiceContainer.style.display = "block";
 };
 
-// form.addEventListener("submit", (event) => {
-//   event.preventDefault();
-//   let inputvalue = document.querySelector("input[name='number']").value;
-//   //alert(inputvalue)
-//   // new NumberWork(inputvalue).displayNumber()
-// });
+// --- Event Listeners ---
+document.querySelector("form[name='myForm']").addEventListener("submit", submitHandler);
+document.querySelector("#yes").addEventListener("click", onYes);
+document.querySelector("#no").addEventListener("click", onNo);
+document.querySelector("#save").addEventListener("click", saveName);
